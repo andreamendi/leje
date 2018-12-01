@@ -61,16 +61,19 @@
 </div>
 
 
-<div class='row'>
-  <div class="col-md-2"> 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 ">
-      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-2 ">
-          <h2 class="display-5">Kids</h2>
-          <i class="fas fa-child fa-7x"></i>
+{% for category in category_list %}
+
+  <div class='row'>
+    <div class="col-md-2"> 
+      <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 ">
+        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div class="my-2 ">
+            <h2 class="display-5">{{ category.name }}</h2>
+            <i class={{category.symbol}}></i>
+          </div>
         </div>
-      </div>
-    </div>  
-  </div>
+      </div>  
+    </div>
+{% endfor %}
 
 {% endblock content %}
