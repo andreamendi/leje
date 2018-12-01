@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserProfile, Direction
+from .models import UserProfile, Direction, RankingUser, Category, Product, Card, Rent
 
 
 
@@ -13,5 +13,9 @@ class UserProfileAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(UserProfile, UserProfileAdmin)
-
-
+admin.site.register(Direction)
+admin.site.register(RankingUser)
+admin.site.register(Category)
+admin.site.register(Product)
+admin.site.register(Card)
+admin.site.register(Rent)
