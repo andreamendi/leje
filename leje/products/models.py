@@ -43,6 +43,7 @@ class Category(models.Model):
 	name = models.CharField(max_length = 100, null = False)
 	create_at = models.DateTimeField(auto_now_add=True) # Here we've the date when the user will create the product
 	modified_at = models.DateTimeField(auto_now=True) # Here we've the date when the user modify the product
+	symbol = models.CharField(max_length=30, null=False) # liga para traer el icono dela caegoria
 
 	def __str__(self):
 		return 'Name: {}'.format(self.name)
